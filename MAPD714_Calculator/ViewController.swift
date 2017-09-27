@@ -3,8 +3,8 @@
 //  Date : Sept 26, 2017
 //
 //  Student Id : 300969816
-//  Description : Basic Functionality except Decimal
-//  Version 2.1
+//  Description : Basic Functionality with Decimal
+//  Version 2.2
 
 import UIKit
 
@@ -51,6 +51,14 @@ class ViewController: UIViewController {
         if inputText == "." && decimal == true {
             resultLabel.text = resultLabel.text! + inputText!
             decimal = false
+            
+            if hasOp {
+                secondNumber = secondNumber + inputText!
+            }
+                //first number is saved
+            else{
+                firstNumber = firstNumber + inputText!
+            }
         }
             //When consecutive decimal is pressed then it is not displayed
         else if inputText == "." && decimal == false{
